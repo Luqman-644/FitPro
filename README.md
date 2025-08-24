@@ -10,7 +10,6 @@ It also includes an **AI fitness assistant** that answers fitness questions only
 
 ## ✨ Main Features
 - **Sign Up & Login (Appwrite)** — email and password
-- **Protected pages** — only for logged‑in users
 - **Change password** — from inside the app
 - **Profile** — view and edit your details (name, age, height, weight, goal, etc.)
 - **AI Fitness Assistant (fitness‑only)** — answers gym, workout, and basic nutrition questions
@@ -20,7 +19,6 @@ It also includes an **AI fitness assistant** that answers fitness questions only
 ---
 
 ## 🗺️ Pages (Routes)
-> Route names can vary. Check your router file for exact paths.
 
 - **/** — **Home**: short intro, links to Login/Signup and the AI Assistant.
 - **/auth/signup** — **Sign Up** with email & password.
@@ -29,8 +27,7 @@ It also includes an **AI fitness assistant** that answers fitness questions only
 - **/profile** — **My Profile** (view details and avatar).
 - **/profile/edit** — **Edit Profile** (update fields, upload avatar).
 - **/assistant** — **AI Assistant** for fitness questions only.
-- **/404** — **Not Found** page.
-
+  
 ---
 
 ## 🏗️ Tech
@@ -93,28 +90,11 @@ npm run dev
 
 ---
 
-## 🚀 Deploy to Netlify
-1. Push the repo to GitHub.  
-2. On Netlify → **New site from Git** → choose this repo.  
-3. Build settings:  
-   - **Build command:** `npm run build`  
-   - **Publish directory:** `dist`  
-4. Add the environment variables (same as your `.env`).  
-5. Deploy. Your site will be live at your Netlify domain (e.g., `https://fittpro.netlify.app/`).
-
----
-
-## 🔒 Security
-- Appwrite **endpoint** and **project ID** are public in the client. Protect data using **auth** and **rules**.  
-- **AI API keys are secrets.** If possible, call AI APIs from a small backend/proxy. If calling from the client, consider limits and topic rules.
-
----
 
 ## 🧠 AI Assistant Rules (Fitness‑Only)
 The assistant will:
-- Answer **fitness** questions only (training, mobility, recovery basics, simple nutrition for training).  
-- **Refuse** non‑fitness topics (coding, politics, exams, etc.).  
-- Not give medical diagnoses. For injuries or conditions, it will suggest seeing a professional.
+- Answer **fitness** questions only (training, diet, recovery basics, simple nutrition for training).  
+- **Refuse** non‑fitness topics (coding, politics, exams, normal convo, etc.).  
 
 Example policy:
 > “You are the FitPro Assistant. Only answer questions about fitness, workouts, mobility, nutrition for training, recovery, and gym safety. Refuse other topics. Do not provide medical diagnoses.”
@@ -147,15 +127,6 @@ src/
   App.jsx
 public/
 ```
-
----
-
-## ✅ Roadmap (Ideas)
-- Exercise library (by muscle group & equipment)
-- Save programs and track progress
-- Rest timers
-- More AI tools (plan builder, deload helper)
-- Dark mode and accessibility
 
 ---
 
