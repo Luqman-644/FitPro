@@ -28,7 +28,7 @@ const Header = () => {
             <div className="container mx-auto px-4 py-4 flex justify-between items-center">
                 <Link to="/" className="flex items-center space-x-2">
                     <div className="w-20 h-10 rounded-full flex items-center justify-center">
-                        <img src="public/image-removebg-preview.png" alt="" />
+                        <a href="https://ibb.co/GQP8704Z"><img src="https://i.ibb.co/TMh7ckxQ/image-removebg-preview.png" alt="image-removebg-preview" border="0" /></a>
                     </div>
                     <span className="text-2xl font-bold gradient-text">FitPro</span>
                 </Link>
@@ -131,7 +131,7 @@ const Header = () => {
                                 {item.name}
                             </Link>
                         ))}
-                        
+
                         {user ? (
                             <div className="flex flex-col space-y-3 pt-4 border-t border-gray-800">
                                 <div className="flex items-center space-x-2 py-2">
